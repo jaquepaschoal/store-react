@@ -4,7 +4,9 @@ import "font-awesome/css/font-awesome.css";
 
 injectGlobal`
   * {
-
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
   }
 
   body {
