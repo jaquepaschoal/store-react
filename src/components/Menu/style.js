@@ -15,10 +15,14 @@ export const Container = styled.div`
 
     li {
       margin: 0 24px;
+      width: 70px;
 
       a {
         color: white;
         text-decoration: none;
+        &:hover {
+          font-weight: bold;
+        }
       }
     }
 
