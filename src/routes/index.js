@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "../components/Header";
 import Menu from "../components/Menu";
 import Home from "../pages/Home";
+import Cart from "../pages/Cart";
+import Detail from "../pages/Detail";
 
 const Routes = () => (
   <BrowserRouter>
@@ -11,7 +13,9 @@ const Routes = () => (
       <Header />
       <Menu />
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/detail" component={Detail} />
       </Switch>
     </Fragment>
   </BrowserRouter>

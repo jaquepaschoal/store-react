@@ -4,20 +4,20 @@ export const Container = styled.div`
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
-`;
 
-export const Content = styled.a`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #c3c3c3;
-  width: calc((100% / 5) - 25px);
-  margin: 40px 40px;
-  height: 350px;
-  transition: 0.1s ease-in-out;
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #c3c3c3;
+    width: calc((100% / 5) - 25px);
+    margin: 40px 40px;
+    height: 350px;
+    transition: 0.1s ease-in-out;
+  }
 
   img {
     width: 150px;
