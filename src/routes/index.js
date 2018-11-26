@@ -6,6 +6,7 @@ import Menu from "../components/Menu";
 import Home from "../pages/Home";
 import Cart from "../pages/Cart";
 import Detail from "../pages/Detail";
+import Footer from "../components/Footer";
 
 const Routes = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const Routes = () => (
         <Route path="/cart" component={Cart} />
         <Route path="/detail" component={Detail} />
       </Switch>
+      <Footer />
     </Fragment>
   </BrowserRouter>
 );
