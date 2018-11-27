@@ -6,6 +6,8 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as CategoryDetailsActions } from "../../store/ducks/categoryDetails";
 
+import Loading from "../../components/Loading";
+
 import { Link } from "react-router-dom";
 
 class Home extends Component {
@@ -27,8 +29,10 @@ class Home extends Component {
       this.props.getCategoryDetailsRequest(id);
     }
   }
-  render() {
+
+  renderDetails() {
     const products = this.props.categoryDetails.data.products;
+
     return (
       <Container>
         {products &&
@@ -43,6 +47,15 @@ class Home extends Component {
             );
           })}
       </Container>
+    );
+  }
+  render() {
+    return this.props.categoryDetails.loading ? (
+      <Container>
+        <Loading />
+      </Container>
+    ) : (
+      this.renderDetails()
     );
   }
 }
