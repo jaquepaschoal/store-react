@@ -2,87 +2,59 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Container } from "./style";
 
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { Creators as CategoryDetailsActions } from "../../store/ducks/categoryDetails";
+
 import { Link } from "react-router-dom";
 
 class Home extends Component {
+  componentDidMount() {
+    this.loadCategory();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.id !== this.props.match.params.id) {
+      this.loadCategory();
+    }
+  }
+
+  loadCategory() {
+    const { id } = this.props.match.params;
+    if (this.props.match.path === "/") {
+      this.props.getCategoryDetailsRequest(1);
+    } else {
+      this.props.getCategoryDetailsRequest(id);
+    }
+  }
   render() {
+    const products = this.props.categoryDetails.data.products;
     return (
       <Container>
-        <Link to="/detail">
-          <img
-            src="https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg"
-            alt="produto"
-          />
-          <h2>Camiseta Trok</h2>
-          <h3>descrição</h3>
-          <span>R$40.00</span>
-        </Link>
-        <Link to="/detail">
-          <img
-            src="https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg"
-            alt="produto"
-          />
-          <h2>Camiseta Trok</h2>
-          <h3>descrição</h3>
-          <span>R$40.00</span>
-        </Link>
-        <Link to="/detail">
-          <img
-            src="https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg"
-            alt="produto"
-          />
-          <h2>Camiseta Trok</h2>
-          <h3>descrição</h3>
-          <span>R$40.00</span>
-        </Link>
-        <Link to="/detail">
-          <img
-            src="https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg"
-            alt="produto"
-          />
-          <h2>Camiseta Trok</h2>
-          <h3>descrição</h3>
-          <span>R$40.00</span>
-        </Link>
-        <Link to="/detail">
-          <img
-            src="https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg"
-            alt="produto"
-          />
-          <h2>Camiseta Trok</h2>
-          <h3>descrição</h3>
-          <span>R$40.00</span>
-        </Link>
-        <Link to="/detail">
-          <img
-            src="https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg"
-            alt="produto"
-          />
-          <h2>Camiseta Trok</h2>
-          <h3>descrição</h3>
-          <span>R$40.00</span>
-        </Link>
-        <Link to="/detail">
-          <img
-            src="https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg"
-            alt="produto"
-          />
-          <h2>Camiseta Trok</h2>
-          <h3>descrição</h3>
-          <span>R$40.00</span>
-        </Link>
-        <Link to="/detail">
-          <img
-            src="https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg"
-            alt="produto"
-          />
-          <h2>Camiseta Trok</h2>
-          <h3>descrição</h3>
-          <span>R$40.00</span>
-        </Link>
+        {products &&
+          products.map(product => {
+            return (
+              <Link key={product.id} to={`/detail${product.id}`}>
+                <img src={product.image} alt={product.name} />
+                <h2>{product.name}</h2>
+                <h3>{product.brand}</h3>
+                <span>R${product.price}</span>
+              </Link>
+            );
+          })}
       </Container>
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  categoryDetails: state.categoryDetails
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(CategoryDetailsActions, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);
