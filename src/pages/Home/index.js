@@ -32,13 +32,12 @@ class Home extends Component {
 
   renderDetails() {
     const products = this.props.categoryDetails.data.products;
-
     return (
       <Container>
         {products &&
           products.map(product => {
             return (
-              <Link key={product.id} to={`/detail${product.id}`}>
+              <Link key={product.id} to={`/detail/${product.id}`}>
                 <img src={product.image} alt={product.name} />
                 <h2>{product.name}</h2>
                 <h3>{product.brand}</h3>

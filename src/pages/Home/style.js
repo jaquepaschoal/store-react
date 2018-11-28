@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   padding: 20px;
+  justify-content: center;
   flex-wrap: wrap;
-  height: calc(100vh - 191px);
+  min-height: calc(100vh - 191px);
 
   a {
     display: flex;
@@ -18,6 +19,22 @@ export const Container = styled.div`
     margin: 40px 40px;
     height: 350px;
     transition: 0.1s ease-in-out;
+
+    @media (max-width: 1390px) {
+      width: calc((100% / 4) - 25px);
+    }
+
+    @media (max-width: 1135px) {
+      width: calc((100% / 3) - 25px);
+    }
+
+    @media (max-width: 790px) {
+      width: 100%;
+    }
+
+    &:hover {
+      box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.15);
+    }
   }
 
   img {
@@ -41,9 +58,5 @@ export const Container = styled.div`
     font-size: 26px;
     color: #5098a3;
     font-weight: 700;
-  }
-
-  &:hover {
-    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.15);
   }
 `;

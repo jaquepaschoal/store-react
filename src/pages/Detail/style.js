@@ -4,7 +4,12 @@ export const Content = styled.div`
   display: flex;
   justify-content: center;
   padding: 30px 30px;
-  height: calc(100vh - 211px);
+  min-height: calc(100vh - 211px);
+
+  @media (max-width: 572px) {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
 `;
 
 export const ContainerImg = styled.div`
@@ -14,8 +19,13 @@ export const ContainerImg = styled.div`
   padding: 20px;
   height: 300px;
   border: 1px solid #c3c3c3;
+
   img {
     height: 300px;
+  }
+
+  @media (max-width: 572px) {
+    width: 85%;
   }
 `;
 
@@ -24,6 +34,12 @@ export const Description = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 30px;
+
+  @media (max-width: 572px) {
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+  }
 
   h2 {
     color: #20232a;

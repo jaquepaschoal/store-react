@@ -2,29 +2,67 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ContainerImg, Description, Content, Price } from "./style";
 
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { Creators as ProductDetailsActions } from "../../store/ducks/productDetails";
+
+import Loading from "../../components/Loading";
 class Detail extends Component {
-  render() {
+  componentDidMount() {
+    this.loadProduct();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.id !== this.props.match.params.id) {
+      this.loadProduct();
+    }
+  }
+
+  loadProduct() {
+    const { id } = this.props.match.params;
+    this.props.getProductDetailsRequest(id);
+  }
+
+  renderProduct() {
+    const product = this.props.productDetails.data;
     return (
       <Content>
         <ContainerImg>
-          <img
-            src="https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg"
-            alt=""
-          />
+          <img src={product.image} alt={product.name} />
         </ContainerImg>
         <Description>
           <div>
-            <h1>Camiseta Trok</h1>
-            <span>Element</span>
+            <h1>{product.name}</h1>
+            <span>{product.brand}</span>
           </div>
           <div>
-            <Price>R$50,00</Price>
+            <Price>{`R$${product.price}`}</Price>
             <button>Adicionar ao carrinho</button>
           </div>
         </Description>
       </Content>
     );
   }
+
+  render() {
+    return this.props.productDetails.loading ? (
+      <Content>
+        <Loading />
+      </Content>
+    ) : (
+      this.renderProduct()
+    );
+  }
 }
 
-export default Detail;
+const mapStateToProps = state => ({
+  productDetails: state.productDetails
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(ProductDetailsActions, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Detail);

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  height: calc(100vh - 151px);
+  min-height: calc(100vh - 151px);
 `;
 
 export const Table = styled.table`
