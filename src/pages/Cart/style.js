@@ -4,6 +4,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   min-height: calc(100vh - 151px);
+
+  h1 {
+    color: #20232a;
+    margin-top: 100px;
+  }
 `;
 
 export const Table = styled.table`

@@ -61,7 +61,12 @@ export const Description = styled.div`
     font-weight: bold;
     padding: 15px 0;
     margin-top: 20px;
+    transition: 0.2s ease-in;
     cursor: pointer;
+
+    &:hover {
+      background-color: #427f89;
+    }
   }
 `;
 

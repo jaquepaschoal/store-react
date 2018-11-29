@@ -1,8 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 import { Container, Logo } from "./style";
 import { Link } from "react-router-dom";
 
-const Header = () => (
+import { connect } from "react-redux";
+import { Creators as CartActions } from "../../store/ducks/cart";
+import { bindActionCreators } from "redux";
+
+const Header = props => (
   <Container>
     <Logo>
       <Link to={"/"}>
@@ -21,10 +25,20 @@ const Header = () => (
         <i className="fa fa-shopping-cart" />
       </span>
       <p>
-        Meu carrinho <span> (3)</span>
+        Meu carrinho <span> ({props.cart})</span>
       </p>
     </Link>
   </Container>
 );
 
-export default Header;
+const mapStateToProps = state => ({
+  cart: state.cart.data.length
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(CartActions, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header);

@@ -5,6 +5,7 @@ import { ContainerImg, Description, Content, Price } from "./style";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as ProductDetailsActions } from "../../store/ducks/productDetails";
+import { Creators as cartActions } from "../../store/ducks/cart";
 
 import Loading from "../../components/Loading";
 class Detail extends Component {
@@ -23,6 +24,10 @@ class Detail extends Component {
     this.props.getProductDetailsRequest(id);
   }
 
+  addProductToCart() {
+    this.props.addProduct(this.props.productDetails.data);
+  }
+
   renderProduct() {
     const product = this.props.productDetails.data;
     return (
@@ -37,7 +42,9 @@ class Detail extends Component {
           </div>
           <div>
             <Price>{`R$${product.price}`}</Price>
-            <button>Adicionar ao carrinho</button>
+            <button onClick={() => this.addProductToCart()}>
+              Adicionar ao carrinho
+            </button>
           </div>
         </Description>
       </Content>
@@ -56,11 +63,12 @@ class Detail extends Component {
 }
 
 const mapStateToProps = state => ({
-  productDetails: state.productDetails
+  productDetails: state.productDetails,
+  cart: state.cart
 });
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators(ProductDetailsActions, dispatch);
+  bindActionCreators({ ...ProductDetailsActions, ...cartActions }, dispatch);
 
 export default connect(
   mapStateToProps,

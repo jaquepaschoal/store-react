@@ -3,7 +3,7 @@ import { Container } from "./style";
 
 const Loading = () => (
   <Container>
-    <i class="fa fa-spinner fa-spin" />
+    <i className="fa fa-spinner fa-spin" />
   </Container>
 );
 
