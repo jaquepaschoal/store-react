@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ContainerImg, Description, Content, Price } from "./style";
+import { Link } from "react-router-dom";
+
+import { ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -24,14 +29,29 @@ class Detail extends Component {
     this.props.getProductDetailsRequest(id);
   }
 
-  addProductToCart() {
+  addProductToCart(e) {
     this.props.addProduct(this.props.productDetails.data);
+    const options = {
+      autoClose: 9000,
+      style: {
+        background: "pink"
+      },
+      type: toast.TYPE.INFO,
+      hideProgressBar: false
+    };
+    toast.info(
+      <Link to="/cart">
+        Item adicionado ao carrinho, clique para conferir !
+      </Link>,
+      options
+    );
   }
 
   renderProduct() {
     const product = this.props.productDetails.data;
     return (
       <Content>
+        <ToastContainer />
         <ContainerImg>
           <img src={product.image} alt={product.name} />
         </ContainerImg>
@@ -42,7 +62,7 @@ class Detail extends Component {
           </div>
           <div>
             <Price>{`R$${product.price}`}</Price>
-            <button onClick={() => this.addProductToCart()}>
+            <button onClick={e => this.addProductToCart(e)}>
               Adicionar ao carrinho
             </button>
           </div>

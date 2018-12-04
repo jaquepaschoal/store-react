@@ -6,6 +6,19 @@ export const Content = styled.div`
   padding: 30px 30px;
   min-height: calc(100vh - 211px);
 
+  .Toastify__toast--info {
+    background-color: #a2b2bc;
+  }
+
+  .Toastify__toast-body {
+    margin: auto 30px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
   @media (max-width: 572px) {
     flex-direction: column;
     padding: 20px 30px;
