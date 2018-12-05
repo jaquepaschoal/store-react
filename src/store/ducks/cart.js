@@ -5,7 +5,7 @@ export const Types = {
 };
 
 const INITIAL_STATE = {
-  data: "",
+  data: [],
   loading: false
 };
 
@@ -62,8 +62,8 @@ export default function categories(state = INITIAL_STATE, action) {
         if (element.id === action.payload.id) {
           return {
             ...element,
-            subtotal: element.price * action.payload.qnt,
-            qnt: action.payload.qnt
+            subtotal: element.price * parseInt(action.payload.qnt),
+            qnt: parseInt(action.payload.qnt)
           };
         }
         return element;

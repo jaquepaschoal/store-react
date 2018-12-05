@@ -31,8 +31,27 @@ const Header = props => (
   </Container>
 );
 
+const countItems = items => {
+  let someQnt = [];
+  let total = [];
+
+  someQnt = items.map(item => {
+    return item.qnt;
+  });
+
+  console.log(someQnt);
+
+  if (someQnt.length > 0) {
+    total = someQnt.reduce((acc, actual) => {
+      return acc + actual;
+    });
+  }
+
+  return someQnt.length > 0 ? total : 0;
+};
+
 const mapStateToProps = state => ({
-  cart: state.cart.data.length
+  cart: countItems(state.cart.data)
 });
 
 const mapDispatchToProps = dispatch =>
