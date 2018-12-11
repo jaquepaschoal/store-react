@@ -41,7 +41,7 @@ class Home extends Component {
                 <img src={product.image} alt={product.name} />
                 <h2>{product.name}</h2>
                 <h3>{product.brand}</h3>
-                <span>R${product.price}</span>
+                <span>R${(product.price).toLocaleString('pt-BR')}</span>
               </Link>
             );
           })}

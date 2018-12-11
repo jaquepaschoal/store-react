@@ -12,38 +12,24 @@ const INITIAL_STATE = {
 export default function categories(state = INITIAL_STATE, action) {
   switch (action.type) {
     case Types.ADD_PRODUCT:
-      if (state.data.length > 0) {
-        let isInCart = state.data.some(element => {
-          return element.id === action.payload.product.id;
-        });
+      let isInCart = state.data.some(element => {
+        return element.id === action.payload.product.id;
+      });
 
-        if (isInCart) {
-          let quantity = 0;
-          let repeatedProduct = state.data.map(element => {
-            if (element.id === action.payload.product.id) {
-              quantity = element.qnt + 1;
-              return {
-                ...element,
-                qnt: element.qnt + 1,
-                subtotal: element.subtotal * quantity
-              };
-            }
-            return element;
-          });
-          return { ...state, data: repeatedProduct };
-        } else {
-          return {
-            ...state,
-            data: [
-              ...state.data,
-              {
-                ...action.payload.product,
-                qnt: 1,
-                subtotal: action.payload.product.price
-              }
-            ]
-          };
-        }
+      if (isInCart) {
+        let quantity = 0;
+        let repeatedProduct = state.data.map(element => {
+          if (element.id === action.payload.product.id) {
+            quantity = element.qnt + 1;
+            return {
+              ...element,
+              qnt: element.qnt + 1,
+              subtotal: element.subtotal * quantity
+            };
+          }
+          return element;
+        });
+        return { ...state, data: repeatedProduct };
       } else {
         return {
           ...state,

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "./style";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -19,7 +19,13 @@ class Menu extends Component {
           {categories.map(category => {
             return (
               <li key={category.id}>
-                <Link to={`/category/${category.id}`}>{category.title}</Link>
+                <NavLink
+                  exact
+                  activeClassName="active"
+                  to={`/category/${category.id}`}
+                >
+                  {category.title}
+                </NavLink>
               </li>
             );
           })}

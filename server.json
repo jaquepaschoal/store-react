@@ -33,28 +33,28 @@
           "id": 1,
           "name": "Camiseta Hyperas Preta",
           "brand": "Quiksilver",
-          "image": "https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg",
+          "image": "https://t-static.dafiti.com.br/-UjPnf-SsNt6jQ_w2orFpA7KQaI=/fit-in/430x623/dafitistatic-a.akamaihd.net%2fp%2fpolo-wear-camiseta-polo-wear-b%c3%a1sica-azul-marinho-4180-9085673-1-zoom.jpg",
           "price": 49.99
         },
         {
           "id": 2,
           "name": "Camiseta Double Tap Preta",
           "brand": "Quiksilver",
-          "image": "https://t-static.dafiti.com.br/EpEXepU-tSbgo6ZMl4Y5BOdjelw=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-double-tap-preta-7115-8165043-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Calvin-Klein-Jeans-Camiseta-Calvin-Klein-Jeans-Estampada-Branca-6389-2315504-1-zoom.jpg",
           "price": 59.99
         },
         {
           "id": 3,
           "name": "Camiseta Logo Azul",
           "brand": "Red Bull",
-          "image": "https://t-static.dafiti.com.br/aC9871vKWfL3bDgbhLx5sFLa7xs=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fred-bull-camiseta-red-bull-logo-azul-0272-7714033-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Reef-Camiseta-Reef-Patch-Cinza-2095-8403833-1-zoom.jpg",
           "price": 54.99
         },
         {
           "id": 4,
           "name": "Camiseta Primo Tipper",
           "brand": "Rip Curl",
-          "image": "https://t-static.dafiti.com.br/weG0u9eKZ4KBV-G0XFOQ5hoY4eI=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2frip-curl-camiseta-rip-curl-primo-tipper-preto-8138-3441052-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Billabong-Camiseta-Billabong-Equation-Preta-7267-2555353-1-zoom.jpg",
           "price": 39.99
         }
       ]
@@ -73,21 +73,21 @@
           "id": 3,
           "name": "Camiseta Logo Azul",
           "brand": "Red Bull",
-          "image": "https://t-static.dafiti.com.br/aC9871vKWfL3bDgbhLx5sFLa7xs=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fred-bull-camiseta-red-bull-logo-azul-0272-7714033-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Reef-Camiseta-Reef-Patch-Cinza-2095-8403833-1-zoom.jpg",
           "price": 54.99
         },
         {
           "id": 1,
           "name": "Camiseta Hyperas Preta",
           "brand": "Quiksilver",
-          "image": "https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Billabong-Camiseta-Billabong-Equation-Preta-7267-2555353-1-zoom.jpg",
           "price": 49.99
         },
         {
           "id": 4,
           "name": "Camiseta Primo Tipper",
           "brand": "Rip Curl",
-          "image": "https://t-static.dafiti.com.br/weG0u9eKZ4KBV-G0XFOQ5hoY4eI=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2frip-curl-camiseta-rip-curl-primo-tipper-preto-8138-3441052-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Calvin-Klein-Jeans-Camiseta-Calvin-Klein-Jeans-Estampada-Branca-6389-2315504-1-zoom.jpg",
           "price": 39.99
         }
       ]
@@ -95,13 +95,6 @@
     {
       "id": 3,
       "products": [
-        {
-          "id": 4,
-          "name": "Camiseta Primo Tipper",
-          "brand": "Rip Curl",
-          "image": "https://t-static.dafiti.com.br/weG0u9eKZ4KBV-G0XFOQ5hoY4eI=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2frip-curl-camiseta-rip-curl-primo-tipper-preto-8138-3441052-1-product.jpg",
-          "price": 39.99
-        },
         {
           "id": 2,
           "name": "Camiseta Double Tap Preta",
@@ -113,15 +106,22 @@
           "id": 3,
           "name": "Camiseta Logo Azul",
           "brand": "Red Bull",
-          "image": "https://t-static.dafiti.com.br/aC9871vKWfL3bDgbhLx5sFLa7xs=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fred-bull-camiseta-red-bull-logo-azul-0272-7714033-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Reef-Camiseta-Reef-Patch-Cinza-2095-8403833-1-zoom.jpg",
           "price": 54.99
         },
         {
           "id": 1,
           "name": "Camiseta Hyperas Preta",
           "brand": "Quiksilver",
-          "image": "https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Billabong-Camiseta-Billabong-Equation-Preta-7267-2555353-1-zoom.jpg",
           "price": 49.99
+        },
+        {
+          "id": 4,
+          "name": "Camiseta Primo Tipper",
+          "brand": "Rip Curl",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Calvin-Klein-Jeans-Camiseta-Calvin-Klein-Jeans-Estampada-Branca-6389-2315504-1-zoom.jpg",
+          "price": 39.99
         }
       ]
     },
@@ -139,35 +139,28 @@
           "id": 3,
           "name": "Camiseta Logo Azul",
           "brand": "Red Bull",
-          "image": "https://t-static.dafiti.com.br/aC9871vKWfL3bDgbhLx5sFLa7xs=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fred-bull-camiseta-red-bull-logo-azul-0272-7714033-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Reef-Camiseta-Reef-Patch-Cinza-2095-8403833-1-zoom.jpg",
           "price": 54.99
-        },
-        {
-          "id": 4,
-          "name": "Camiseta Primo Tipper",
-          "brand": "Rip Curl",
-          "image": "https://t-static.dafiti.com.br/weG0u9eKZ4KBV-G0XFOQ5hoY4eI=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2frip-curl-camiseta-rip-curl-primo-tipper-preto-8138-3441052-1-product.jpg",
-          "price": 39.99
         },
         {
           "id": 1,
           "name": "Camiseta Hyperas Preta",
           "brand": "Quiksilver",
-          "image": "https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Billabong-Camiseta-Billabong-Equation-Preta-7267-2555353-1-zoom.jpg",
           "price": 49.99
+        },
+        {
+          "id": 4,
+          "name": "Camiseta Primo Tipper",
+          "brand": "Rip Curl",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Calvin-Klein-Jeans-Camiseta-Calvin-Klein-Jeans-Estampada-Branca-6389-2315504-1-zoom.jpg",
+          "price": 39.99
         }
       ]
     },
     {
       "id": 5,
       "products": [
-        {
-          "id": 1,
-          "name": "Camiseta Hyperas Preta",
-          "brand": "Quiksilver",
-          "image": "https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg",
-          "price": 49.99
-        },
         {
           "id": 2,
           "name": "Camiseta Double Tap Preta",
@@ -179,14 +172,21 @@
           "id": 3,
           "name": "Camiseta Logo Azul",
           "brand": "Red Bull",
-          "image": "https://t-static.dafiti.com.br/aC9871vKWfL3bDgbhLx5sFLa7xs=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fred-bull-camiseta-red-bull-logo-azul-0272-7714033-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Reef-Camiseta-Reef-Patch-Cinza-2095-8403833-1-zoom.jpg",
           "price": 54.99
+        },
+        {
+          "id": 1,
+          "name": "Camiseta Hyperas Preta",
+          "brand": "Quiksilver",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Billabong-Camiseta-Billabong-Equation-Preta-7267-2555353-1-zoom.jpg",
+          "price": 49.99
         },
         {
           "id": 4,
           "name": "Camiseta Primo Tipper",
           "brand": "Rip Curl",
-          "image": "https://t-static.dafiti.com.br/weG0u9eKZ4KBV-G0XFOQ5hoY4eI=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2frip-curl-camiseta-rip-curl-primo-tipper-preto-8138-3441052-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Calvin-Klein-Jeans-Camiseta-Calvin-Klein-Jeans-Estampada-Branca-6389-2315504-1-zoom.jpg",
           "price": 39.99
         }
       ]
@@ -205,34 +205,27 @@
           "id": 3,
           "name": "Camiseta Logo Azul",
           "brand": "Red Bull",
-          "image": "https://t-static.dafiti.com.br/aC9871vKWfL3bDgbhLx5sFLa7xs=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fred-bull-camiseta-red-bull-logo-azul-0272-7714033-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Reef-Camiseta-Reef-Patch-Cinza-2095-8403833-1-zoom.jpg",
           "price": 54.99
         },
         {
           "id": 1,
           "name": "Camiseta Hyperas Preta",
           "brand": "Quiksilver",
-          "image": "https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Billabong-Camiseta-Billabong-Equation-Preta-7267-2555353-1-zoom.jpg",
           "price": 49.99
         },
         {
           "id": 4,
           "name": "Camiseta Primo Tipper",
           "brand": "Rip Curl",
-          "image": "https://t-static.dafiti.com.br/weG0u9eKZ4KBV-G0XFOQ5hoY4eI=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2frip-curl-camiseta-rip-curl-primo-tipper-preto-8138-3441052-1-product.jpg",
+          "image": "https://dafitistatic-a.akamaihd.net/p/Calvin-Klein-Jeans-Camiseta-Calvin-Klein-Jeans-Estampada-Branca-6389-2315504-1-zoom.jpg",
           "price": 39.99
         }
       ]
     }
   ],
   "products": [
-    {
-      "id": 1,
-      "name": "Camiseta Hyperas Preta",
-      "brand": "Quiksilver",
-      "image": "https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg",
-      "price": 49.99
-    },
     {
       "id": 2,
       "name": "Camiseta Double Tap Preta",
@@ -244,14 +237,21 @@
       "id": 3,
       "name": "Camiseta Logo Azul",
       "brand": "Red Bull",
-      "image": "https://t-static.dafiti.com.br/aC9871vKWfL3bDgbhLx5sFLa7xs=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fred-bull-camiseta-red-bull-logo-azul-0272-7714033-1-product.jpg",
+      "image": "https://dafitistatic-a.akamaihd.net/p/Reef-Camiseta-Reef-Patch-Cinza-2095-8403833-1-zoom.jpg",
       "price": 54.99
+    },
+    {
+      "id": 1,
+      "name": "Camiseta Hyperas Preta",
+      "brand": "Quiksilver",
+      "image": "https://dafitistatic-a.akamaihd.net/p/Billabong-Camiseta-Billabong-Equation-Preta-7267-2555353-1-zoom.jpg",
+      "price": 49.99
     },
     {
       "id": 4,
       "name": "Camiseta Primo Tipper",
       "brand": "Rip Curl",
-      "image": "https://t-static.dafiti.com.br/weG0u9eKZ4KBV-G0XFOQ5hoY4eI=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2frip-curl-camiseta-rip-curl-primo-tipper-preto-8138-3441052-1-product.jpg",
+      "image": "https://dafitistatic-a.akamaihd.net/p/Calvin-Klein-Jeans-Camiseta-Calvin-Klein-Jeans-Estampada-Branca-6389-2315504-1-zoom.jpg",
       "price": 39.99
     }
   ]

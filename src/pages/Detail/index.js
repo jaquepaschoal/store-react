@@ -61,7 +61,9 @@ class Detail extends Component {
             <span>{product.brand}</span>
           </div>
           <div>
-            <Price>{`R$${product.price}`}</Price>
+            <Price>{`R$${
+              product.price ? product.price.toLocaleString("pt-BR") : ""
+            }`}</Price>
             <button onClick={e => this.addProductToCart(e)}>
               Adicionar ao carrinho
             </button>

@@ -39,8 +39,6 @@ const countItems = items => {
     return item.qnt;
   });
 
-  console.log(someQnt);
-
   if (someQnt.length > 0) {
     total = someQnt.reduce((acc, actual) => {
       return acc + actual;
