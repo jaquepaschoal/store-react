@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import { ContainerImg, Description, Content, Price } from "./style";
 import { Link } from "react-router-dom";
 
-import { ToastContainer } from "react-toastify";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 import { connect } from "react-redux";
@@ -33,9 +32,7 @@ class Detail extends Component {
     this.props.addProduct(this.props.productDetails.data);
     const options = {
       autoClose: 9000,
-      style: {
-        background: "pink"
-      },
+      closeOnClick: true,
       type: toast.TYPE.INFO,
       hideProgressBar: false
     };

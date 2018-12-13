@@ -6,7 +6,7 @@ export const Types = {
 
 const INITIAL_STATE = {
   data: [],
-  loading: false
+  total: 0
 };
 
 export default function categories(state = INITIAL_STATE, action) {
@@ -15,10 +15,9 @@ export default function categories(state = INITIAL_STATE, action) {
       let isInCart = state.data.some(element => {
         return element.id === action.payload.product.id;
       });
-
       if (isInCart) {
         let quantity = 0;
-        let repeatedProduct = state.data.map(element => {
+        let dataAtt = state.data.map(element => {
           if (element.id === action.payload.product.id) {
             quantity = element.qnt + 1;
             return {
@@ -29,10 +28,14 @@ export default function categories(state = INITIAL_STATE, action) {
           }
           return element;
         });
-        return { ...state, data: repeatedProduct };
+
+        let total1 = dataAtt.reduce(function(a, b) {
+          return a + b["subtotal"];
+        }, 0);
+
+        return { data: dataAtt, total: total1 };
       } else {
         return {
-          ...state,
           data: [
             ...state.data,
             {
@@ -40,7 +43,8 @@ export default function categories(state = INITIAL_STATE, action) {
               qnt: 1,
               subtotal: action.payload.product.price
             }
-          ]
+          ],
+          total: state.total + action.payload.product.price
         };
       }
     case Types.ADD_QUANTITY:
@@ -54,12 +58,22 @@ export default function categories(state = INITIAL_STATE, action) {
         }
         return element;
       });
-      return { ...state, data: products };
+
+      let total2 = products.reduce(function(a, b) {
+        return a + b["subtotal"];
+      }, 0);
+
+      return { data: products, total: total2 };
     case Types.DELETE_PRODUCT:
       let stayProducts = state.data.filter(element => {
         return element.id !== action.payload.id;
       });
-      return { ...state, data: stayProducts };
+
+      let total3 = stayProducts.reduce(function(a, b) {
+        return a + b["subtotal"];
+      }, 0);
+
+      return { data: stayProducts, total: total3 };
     default:
       return state;
   }

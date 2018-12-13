@@ -8,11 +8,9 @@ import { Creators as cartActions } from "../../store/ducks/cart";
 
 class Cart extends Component {
   handleQuantity(e, id) {
-    if (parseInt(e.target.value) === 0) {
-      this.props.deleteProduct(id);
-    } else {
-      this.props.addQuantity(id, e.target.value);
-    }
+    parseInt(e.target.value) === 0
+      ? this.props.deleteProduct(id)
+      : this.props.addQuantity(id, e.target.value);
   }
 
   deleteProduct(id) {
@@ -76,7 +74,7 @@ class Cart extends Component {
           </Table>
           <div>
             <span>total</span>
-            <Description className="spotlight">R$300,00</Description>
+            <p>R${`${this.props.cart.total}`}</p>
           </div>
         </Container>
       </Fragment>
