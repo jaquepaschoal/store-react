@@ -74,7 +74,7 @@ class Cart extends Component {
           </Table>
           <div>
             <span>total</span>
-            <p>R${`${this.props.cart.total}`}</p>
+            <p>R${`${this.props.cart.total.toLocaleString("pt-BR")}`}</p>
           </div>
         </Container>
       </Fragment>
