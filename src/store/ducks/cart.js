@@ -29,11 +29,11 @@ export default function categories(state = INITIAL_STATE, action) {
           return element;
         });
 
-        let total1 = dataAtt.reduce(function(a, b) {
+        let totalAddProd = dataAtt.reduce(function(a, b) {
           return a + b["subtotal"];
         }, 0);
 
-        return { data: dataAtt, total: total1 };
+        return { data: dataAtt, total: totalAddProd };
       } else {
         return {
           data: [
@@ -52,28 +52,28 @@ export default function categories(state = INITIAL_STATE, action) {
         if (element.id === action.payload.id) {
           return {
             ...element,
-            subtotal: element.price * parseInt(action.payload.qnt),
-            qnt: parseInt(action.payload.qnt)
+            subtotal: element.price * parseInt(action.payload.qnt, 10),
+            qnt: parseInt(action.payload.qnt, 10)
           };
         }
         return element;
       });
 
-      let total2 = products.reduce(function(a, b) {
+      let totalAddQnt = products.reduce(function(a, b) {
         return a + b["subtotal"];
       }, 0);
 
-      return { data: products, total: total2 };
+      return { data: products, total: totalAddQnt };
     case Types.DELETE_PRODUCT:
       let stayProducts = state.data.filter(element => {
         return element.id !== action.payload.id;
       });
 
-      let total3 = stayProducts.reduce(function(a, b) {
+      let totalDeleteProd = stayProducts.reduce(function(a, b) {
         return a + b["subtotal"];
       }, 0);
 
-      return { data: stayProducts, total: total3 };
+      return { data: stayProducts, total: totalDeleteProd };
     default:
       return state;
   }

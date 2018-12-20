@@ -11,6 +11,20 @@ import Loading from "../../components/Loading";
 import { Link } from "react-router-dom";
 
 class Home extends Component {
+
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        id: PropTypes.string
+      })
+    }),
+    getCategoryDetailsRequest: PropTypes.func.isRequired,
+    categoryDetails: PropTypes.shape({
+      data: PropTypes.object,
+      loading: PropTypes.bool
+    })
+  }
+
   componentDidMount() {
     this.loadCategory();
   }

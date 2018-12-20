@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Proptypes from "prop-types";
 import { Container, Logo } from "./style";
 import { Link } from "react-router-dom";
 
@@ -7,6 +8,7 @@ import { Creators as CartActions } from "../../store/ducks/cart";
 import { bindActionCreators } from "redux";
 
 const Header = props => (
+
   <Container>
     <Logo>
       <Link to={"/"}>
@@ -30,6 +32,10 @@ const Header = props => (
     </Link>
   </Container>
 );
+
+Header.Proptypes = {
+  cart: Proptypes.number
+}
 
 const countItems = items => {
   let someQnt = [];

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Proptypes from "prop-types";
 import { Container } from "./style";
 import { NavLink } from "react-router-dom";
 
@@ -7,6 +8,14 @@ import { bindActionCreators } from "redux";
 import { Creators as CategoriesActions } from "../../store/ducks/categories";
 
 class Menu extends Component {
+
+  static Proptypes = {
+    categories: Proptypes.shape({
+      data: Proptypes.array,
+    }),
+    getCategoriesRequest: Proptypes.func.isRequired
+  }
+
   componentDidMount() {
     this.props.getCategoriesRequest();
   }

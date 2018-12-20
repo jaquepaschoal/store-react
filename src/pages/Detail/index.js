@@ -13,6 +13,24 @@ import { Creators as cartActions } from "../../store/ducks/cart";
 
 import Loading from "../../components/Loading";
 class Detail extends Component {
+
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        id: PropTypes.string
+      })
+    }),
+    addProduct: PropTypes.func.isRequired,
+    addQuantity: PropTypes.func.isRequired,
+    cart: PropTypes.shape({
+      data: PropTypes.array
+    }),
+    getProductDetailsRequest: PropTypes.func.isRequired,
+    productDetails: PropTypes.shape({
+      data: PropTypes.object
+    })
+  }
+
   componentDidMount() {
     this.loadProduct();
   }

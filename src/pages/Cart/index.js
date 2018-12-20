@@ -7,8 +7,17 @@ import { bindActionCreators } from "redux";
 import { Creators as cartActions } from "../../store/ducks/cart";
 
 class Cart extends Component {
+
+  static propTypes = {
+    addQuantity: PropTypes.func.isRequired,
+    cart: PropTypes.shape({
+      data: PropTypes.array,
+    }),
+    deleteProduct: PropTypes.func.isRequired,
+  }
+
   handleQuantity(e, id) {
-    parseInt(e.target.value) === 0
+    parseInt(e.target.value, 10) === 0
       ? this.props.deleteProduct(id)
       : this.props.addQuantity(id, e.target.value);
   }
